@@ -6,15 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, "public")));
 
-const receitas = [
-    {
-        id: 1,
-        nome: "Cuscuz",
-        ingredientes:"Fuba",
-        preparo: "cuscuzeira",
-        imagem: "./image/cuscuz-de-milho-1614715966465_v2_450x450.jpg"
-    }
-];
+
 
 let mensagem = "";
 
