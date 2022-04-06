@@ -1,6 +1,7 @@
+
 const routes = require("express").Router();
-const { Router } = require("express");
-const { route } = require("express/lib/application");
+// const Router = require("express");
+// const { route } = require("express/lib/application");
 const ReceitasController = require("../controllers/ReceitasController");
 
 routes.get("/", ReceitasController.getAll);
