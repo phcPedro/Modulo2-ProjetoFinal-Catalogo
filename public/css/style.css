@@ -135,7 +135,7 @@ section#cadastro form input {
   align-items: center;
 }
 
-section#cadastro form button {
+/* section#cadastro form*/ button, #btn { 
   padding: 0.7em;
   width: auto;
   display: flex;
@@ -149,9 +149,16 @@ section#cadastro form button {
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
   box-shadow: 2px 3px 3px black;
+  text-decoration: none;
+
+}#btn:hover{ 
+  transform: translateY(-5px);
+  background-color: rgb(65, 65, 65);
+  color: #fff;
 }
 
-section#cadastro form button:hover {
+
+/* section#cadastro form*/ button:hover{ 
   transform: translateY(-5px);
   background-color: rgb(65, 65, 65);
   color: #fff;
@@ -225,4 +232,36 @@ span#close {
   font-size: 2rem;
   cursor: pointer;
   transition: .3s;
+}
+
+#modal{
+ background-color: #00000070;
+ width: 100vw;
+ height: 100vh;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 9999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow-y: auto;
+}
+
+.modal-body{
+ margin: 1rem;
+ width: 100%;
+ max-width: 600px;
+ height: auto;
+ min-height: 300px;
+ background-color: rgb(224, 123, 8);
+ border-radius: 11px;
+ display: flex;
+ flex-direction: column;
+ overflow: hidden;
+ justify-content: space-between;
+
+}
+.form-modal{
+  flex-wrap: wrap;
 }

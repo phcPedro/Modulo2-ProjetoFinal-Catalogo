@@ -21,14 +21,6 @@
         </ul>
     </nav>
 
-    <main>
-        <% if(mensagem != "") {%>
-        <section id="message">
-           <p><%= mensagem %></p> 
-           <span id="close" ></span>
-
-        </section>
-        <% } %>
 
 
         <h1>Receitas</h1>
@@ -39,7 +31,8 @@
                 
                     <h2><%= receita.nome %></h2>
                     <img src="<%= receita.imagem %>" alt="" class="image">    
-               
+                    <a id="btn" href="/getById/<%= receita.id %>/put">Editar</a>
+                    <a id="btn" href="/getById/<%= receita.id %>/delete">Apagar</a>
             </div>
             <% }); %>
             
@@ -53,8 +46,34 @@
             
         </div>
     </main>
-
-
+   <% if (receitaEd != null) {%>
+     <section id="'modal">
+       
+        <div class="modal-body">
+                    
+            <form class ='form-modal' action = '/update/<% receitaEd.id %>' method="POST">
+                <div class="receita-editar">
+                   
+                    <label for="nome">Nome do prato:</label>
+                    <input type="text" id="nome" name="nome" value ="<%= receitaEd.nome %>" required>
+        
+                    <label for="ingredientes">Ingredientes:</label>
+                    <input type="text" id="ingredientes" name="ingredientes" value ="<%= receitaEd.ingredientes %>"required>
+                    
+                    <label for="preparo">Modo de preparo:</label>
+                    <input type="text" id="preparo" name="preparo"value ="<%= receitaEd.preparo %>" required>
+                                                            
+                    <label for="imagem">Link da imagem:</label>
+                    <input type="text" id="imagem" name="imagem"value ="<%= receitaEd.imagem %>" required>
+                    
+                    <button id="btnCadastrar" type="submit">CONFIRMAR</button>
+                    
+                </div>
+            </form>
+        </div> 
+  
+     </section>
+   <% } %>
 
     <footer>
 
