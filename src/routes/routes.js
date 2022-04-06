@@ -7,4 +7,5 @@ routes.get("/cadastro", ReceitasController.cadastro);
 routes.get("/contatos", ReceitasController.contatos);
 routes.post("/add", ReceitasController.add);
 routes.get('/getById/:id/:method', ReceitasController.getById);
+routes.post('/update/:id', ReceitasController.update);
 module.exports = routes;

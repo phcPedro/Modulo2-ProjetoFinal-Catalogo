@@ -10,6 +10,7 @@ body {
   scroll-behavior: smooth;
   height: 100vh;
   width: 100%;
+ 
 }
 nav {
   background-color: rgb(224, 123, 8);
@@ -42,6 +43,7 @@ nav ul li a:hover {
 }
 
 header {
+  text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -234,7 +236,7 @@ span#close {
   transition: .3s;
 }
 
-#modal{
+.modal-overlay{
  background-color: #00000070;
  width: 100vw;
  height: 100vh;
@@ -247,14 +249,13 @@ span#close {
  align-items: center;
  overflow-y: auto;
 }
-
-.modal-body{
+.modal{
  margin: 1rem;
  width: 100%;
  max-width: 600px;
  height: auto;
  min-height: 300px;
- background-color: rgb(224, 123, 8);
+ background-color: rgba(255, 207, 139, 1);
  border-radius: 11px;
  display: flex;
  flex-direction: column;
@@ -262,6 +263,35 @@ span#close {
  justify-content: space-between;
 
 }
-.form-modal{
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(224, 123, 8);
+  padding: 1rem;
+
+}
+.modal-header a{
+  font-size: 1.4rem;
+  color: white;
+}
+.modal-body{
+  padding: .5rem 1rem;
+  display: flex;
+  align-content: center;
   flex-wrap: wrap;
+  flex: 1;
+}
+.form-modal{
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-modal input{
+  width: 100%;
+  padding: .5rem;
+  font-size: .8rem;
+  outline: none;
+}
+.form-modal label{
+  padding-top: .5rem;
 }
