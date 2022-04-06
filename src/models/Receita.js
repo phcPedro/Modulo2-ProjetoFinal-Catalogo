@@ -37,5 +37,5 @@ const Receita = connect.define(
 const initTable = async () => {
   await Receita.async();
 }
-initiTable();
+initTable();
 module.exports = Receita;
