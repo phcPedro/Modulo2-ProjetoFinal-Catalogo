@@ -54,7 +54,7 @@
       
        <div class="modal" id ='modal'>
                 
-           <form class ='form-modal' action = '/update/<% receitaEd.id %>' method="POST">
+           <form class ='form-modal' action = '/update/<% receitaEd.id %>' method="">
               <div class ='modal-header'>
                  
                   <h3>Modificar receita</h3>
@@ -81,5 +81,22 @@
  
     </section>
   <% } %>
-  <script src="/js/script.js"></script>
+  <% if (receitaDelete != null) {%>
+    <section class="modal-overlay" id="overlay">
+     <div class="modal" id ='modal'>  
+      <div class ='modal-header'>
+       <h3>Apagar Receita</h3>
+      </div>
+      <div class="modal-body">
+         <p>Quer mesmo excluir essa receita?</p> 
+      </div>
+      <div class='modal-btm'>
+        <a id = 'btn' href="/remove/<% receitaDelete.id %>">SIM</a>
+        <a id ='btn' href="/">NÃO</a>
+
+      </div>
+     <% } %>
+   </div> 
+    </section>
+    <script src="/js/script.js"></script>
 </html>
