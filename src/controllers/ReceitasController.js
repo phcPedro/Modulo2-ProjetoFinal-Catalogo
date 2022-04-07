@@ -69,7 +69,7 @@ const update = async (req, res) => {
   try {
     const receitas = req.body;
     await Receita.update(receitas, { where: { id: req.params.id } });
-    res.redirect("/");
+    
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
@@ -77,7 +77,7 @@ const update = async (req, res) => {
 const remove = async (req, res) => {
   try {
     await Receita.destroy({ where: { id: req.params.id } });
-    res.redirect("/");
+   
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
